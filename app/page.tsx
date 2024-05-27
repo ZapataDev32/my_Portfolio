@@ -3,6 +3,7 @@ import { BsFillMoonStarsFill } from "react-icons/bs";
 import { AiFillTwitterCircle, AiFillLinkedin } from "react-icons/ai";
 import Image from "next/image";
 import deved from "../public/Alberto-Profile-pic.png";
+// import and duplicate picture of project here: import design from '../public/*picture here*'
 
 export default function Home() {
   return (
@@ -47,8 +48,31 @@ export default function Home() {
             <AiFillTwitterCircle />
             <AiFillLinkedin />
           </div>
-          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20">
-            <Image src={deved} alt="Profile Picture" />
+          <div className="relative mx-auto bg-gradient-to-b from-teal-500 rounded-full w-80 h-80 mt-20 overflow-hidden">
+            <Image
+              src={deved}
+              alt="Profile Picture"
+              layout="fill"
+              objectFit="cover"
+            />
+          </div>
+        </section>
+
+        <section>
+          <div>
+            <h3 className="text-3xl py-1">Services I offer</h3>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              Since the beginning of my journey as a freelance developer, I've
+              done remote work for...
+            </p>
+            <p className="text-md py-2 leading-8 text-gray-800">
+              I offer from a wide range of services, including programming
+            </p>
+          </div>
+          <div>
+            <div>
+              <Image src={} />
+            </div>
           </div>
         </section>
       </main>
